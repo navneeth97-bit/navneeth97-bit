@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Security Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Web Security Scanner</h1>
+        <h2>Check for SQL Injection, XSS, and CSRF Vulnerabilities</h2>
+
+        <form method="POST">
+            <input type="url" name="url" placeholder="Enter Website URL" required>
+            <button type="submit">Start Scan</button>
+        </form>
+
+        {% if scan_results %}
+        <div class="scan-result">
+            <div class="scan-result-item {{ scan_results.sql_injection }}">
+                <h2>SQL Injection</h2>
+                <p>{{ scan_results.sql_injection_status }}</p>
+            </div>
+            <div class="scan-result-item {{ scan_results.xss }}">
+                <h2>XSS</h2>
+                <p>{{ scan_results.xss_status }}</p>
+            </div>
+            <div class="scan-result-item {{ scan_results.csrf }}">
+                <h2>CSRF</h2>
+                <p>{{ scan_results.csrf_status }}</p>
+            </div>
+        </div>
+        {% endif %}
+
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
