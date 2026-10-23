@@ -2,7 +2,7 @@
 - 👀 I’m interested in ...web development
 - 🌱 I’m currently learning ...cyber security
 - 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...@girishnavneeth__ on ig
+- 📫 How to reach me 
 - 😄 Pronouns: ...He/him
 - ⚡ Fun fact: ...My college is the worst
 
